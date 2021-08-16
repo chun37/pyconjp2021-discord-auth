@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "pyconjp2021-discord-auth"
+version = "0.1.0"
+description = ""
+authors = ["Yoichi TAKAI <contact@peacock0803sz.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+"discord.py" = "^1.7.3"
+
+[tool.poetry.dev-dependencies]
+black = "^21.7b0"
+mypy = "^0.910"
+flake8 = "^3.9.2"
+python-dotenv = "^0.19.0"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )
+)
+'''
